@@ -1,0 +1,19 @@
+.message-box {
+  width: 100%;
+  align-items: flex-end;
+
+  .icon {
+    padding: 5;
+    flex-grow: 0;
+    border-radius: 50%;
+  }
+
+  .text-area {
+    flex-grow: 1;
+    align-items: flex-end;
+
+    .text-view {
+      flex-grow: 1;
+    }
+  }
+}

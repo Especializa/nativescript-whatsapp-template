@@ -1,0 +1,36 @@
+@import '~nativescript-theme-core/scss/light';
+@import '~nativescript-theme-core/scss/index';
+@import 'message-box.component.common';
+
+.message-box {
+  background-color: #FAFAFA;
+  border-top-color: #D6D3CD;
+  border-top-width: 1;
+
+  .icon {
+    font-size: 28;
+    color: $blue;
+    opacity: .8;
+    margin: 4;
+  }
+
+  .text-area {
+
+    .text-view {
+      border-radius: 50%;
+      border-width: 1;
+      border-color: #d8d8d8;
+      font-size: 16;
+      padding: 5;
+      margin-bottom: 8;
+    }
+    .camera {
+      height: 80%;
+    }
+  }
+
+  .separator {
+    margin-bottom: 15;
+    opacity: .4;
+  }
+}

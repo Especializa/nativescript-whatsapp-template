@@ -1,0 +1,15 @@
+<Fab icon="res://ic_comment" rippleColor="#7EECA6" class="fab-button"></Fab>
+<TabView [(ngModel)]="selectedIndex" class="tab-view">
+  <StackLayout *tabItem="{iconSource: 'res://ic_photo_camera'}">
+    <Label text="Tab Camera" textWrap="true"></Label>
+  </StackLayout>
+  <StackLayout *tabItem="{title: 'Chats'}">
+    <ns-chats></ns-chats>
+  </StackLayout>
+  <StackLayout *tabItem="{title: 'Status'}">
+    <Label text="Tab Status" textWrap="true"></Label>
+  </StackLayout>
+  <StackLayout *tabItem="{title: 'Calls'}">
+    <Label text="Tab Calls" textWrap="true"></Label>
+  </StackLayout>
+</TabView>

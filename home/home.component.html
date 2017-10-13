@@ -1,0 +1,38 @@
+<ActionBar class="action-bar link">
+    <Label text="NativesApp" class="action-bar-title"
+      [class.h1]="platform.isIOS"
+      android:horizontalAlignment="left"
+      ios:horizontalAlignment="center"></Label>
+    <ng-container *ngIf="platform.isAndroid">
+      <ActionItem android.systemIcon="ic_menu_search_mtrl_alpha">
+      </ActionItem>
+      <ActionItem
+        android.position="popup"
+        text="New group">
+      </ActionItem>
+      <ActionItem
+        android.position="popup"
+        text="New broadcast">
+      </ActionItem>
+      <ActionItem
+        android.position="popup"
+        text="NativesApp Web">
+      </ActionItem>
+      <ActionItem
+        android.position="popup"
+        text="Starred messages">
+      </ActionItem>
+      <ActionItem
+        android.position="popup"
+        text="Settings">
+      </ActionItem>
+    </ng-container>
+    <ng-container *ngIf="platform.isIOS">
+      <ActionItem ios.position="left" ios.systemIcon="2">
+      </ActionItem>
+      <ActionItem ios.position="right" ios.systemIcon="7">
+      </ActionItem>
+    </ng-container>
+  </ActionBar>
+
+  <ns-tabs></ns-tabs>

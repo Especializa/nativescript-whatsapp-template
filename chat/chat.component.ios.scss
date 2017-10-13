@@ -1,0 +1,26 @@
+@import '~nativescript-theme-core/scss/light';
+@import 'chat.component.common';
+
+.action-bar {
+  .back {
+    margin: 0;
+    padding: 0;
+  }
+  .action-bar-title {
+    .thumb {
+      width: 36;
+      height: 36;
+      border-radius: 50%;
+      margin-right: 10;
+    }
+    .title {
+      font-weight: bold;
+      font-size: 16;
+    }
+    .subtitle {
+      font-weight: 100;
+      font-size: 12;
+      color: $grey-dark;
+    }
+  }
+}

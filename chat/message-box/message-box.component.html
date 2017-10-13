@@ -1,0 +1,47 @@
+<FlexboxLayout class="message-box">
+  <Label
+    *ngIf="platform.isIOS"
+    [text]="'mdi-add' | fonticon"
+    class="mdi icon"></Label>
+  <FlexboxLayout
+    [shadow]="platform.isAndroid ? {
+      elevation: 2,
+      shape: 'RECTANGLE',
+      bgcolor: '#FFFFFF',
+      cornerRadius: 50
+    } : null" class="text-area">
+    <Label
+      *ngIf="platform.isAndroid"
+      [text]="'mdi-insert-emoticon' | fonticon"
+      class="mdi icon emojis"
+    ></Label>
+    <TextView
+      [hint]="platform.isAndroid ? 'Type a message' : ''"
+      text=""
+      class="text-view"
+    ></TextView>
+    <Label
+      *ngIf="platform.isAndroid"
+      [text]="'mdi-attach-file' | fonticon"
+      class="mdi icon attach"
+    ></Label>
+    <Label
+      [text]="'mdi-photo-camera' | fonticon"
+      class="mdi icon camera"
+    ></Label>
+  </FlexboxLayout>
+  <Label
+    *ngIf="platform.isIOS"
+    [text]="'mdi-more-vert' | fonticon"
+    class="mdi separator"
+  ></Label>
+  <Label
+    [text]="'mdi-mic' | fonticon"
+    class="mdi icon send"
+    [shadow]="platform.isAndroid ? {
+      elevation: 3,
+      shape: 'OVAL',
+      bgcolor: '#006968'
+    } : null"
+  ></Label>
+</FlexboxLayout>

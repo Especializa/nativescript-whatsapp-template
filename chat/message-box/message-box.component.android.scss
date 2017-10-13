@@ -1,0 +1,28 @@
+@import '~nativescript-theme-core/scss/forest';
+@import '~nativescript-theme-core/scss/index';
+@import 'message-box.component.common';
+
+.message-box {
+
+  .icon {
+    font-size: 24;
+    margin: 0 0 5 0;
+  }
+  .text-area {
+    background: white;
+    border-radius: 50%;
+    padding: 0 5;
+    margin: 5;
+
+    .text-view {
+      flex-grow: 1;
+      border-color: transparent;
+      background-color: transparent;
+    }
+  }
+  .send {
+    color: white;
+    padding: 10;
+    margin: 0 5 5 0;
+  }
+}

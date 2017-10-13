@@ -1,0 +1,30 @@
+@import 'chat.component.common';
+
+.action-bar {
+  .action-bar-title {
+    .thumb {
+      width: 40;
+      height: 40;
+      border-radius: 50%;
+      margin-right: 10;
+    }
+    .title {
+      font-weight: bold;
+      font-size: 17;
+    }
+    .subtitle {
+      font-weight: normal;
+      font-size: 12;
+    }
+  }
+  .action-item {
+    .icon {
+      font-size: 25;
+      padding-right: 15;
+
+      &.phone {
+        padding-right: 5;
+      }
+    }
+  }
+}

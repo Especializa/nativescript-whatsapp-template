@@ -1,0 +1,7 @@
+@import '~nativescript-theme-core/scss/light';
+@import 'app-common';
+@import '~nativescript-theme-core/scss/platforms/index.ios';
+
+.link {
+  color: $blue;
+}

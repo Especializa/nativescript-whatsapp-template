@@ -1,0 +1,14 @@
+@import '~nativescript-theme-core/scss/light';
+@import '~nativescript-theme-core/scss/index';
+@import 'chats.component.common';
+
+.unread {
+  font-size: 10;
+  border-radius: 50%;
+  background-color: $blue;
+}
+
+.time {
+  color: $grey-dark;
+  font-size: 12;
+}

@@ -1,0 +1,60 @@
+<ActionBar title="Chat" class="action-bar link">
+  <NavigationButton [text]="unread" icon="res://ic_arrow_back" (tap)="goBack()"></NavigationButton>
+  <GridLayout rows="auto, auto" columns="auto, auto, *" class="action-bar-title" [class.h1]="platform.isIOS">
+    <Image row="0" col="0" rowSpan="2" [src]="chat.contact.avatar" class="thumb"></Image>
+    <Label row="0" col="1" [text]="chat.contact.name" class="title"></Label>
+    <Label row="1" col="1" text="last seen 10:00 AM" class="subtitle"></Label>
+  </GridLayout>
+  <ActionItem ios.position="right" class="action-item mdi" ios:icon="res://video-call">
+    <Label *ngIf="platform.isAndroid" [text]="'mdi-videocam' | fonticon" class="icon"></Label>
+  </ActionItem>
+  <ActionItem ios.position="right" class="action-item mdi" ios:icon="res://tabs/calls">
+    <Label *ngIf="platform.isAndroid" [text]="'mdi-phone' | fonticon" class="icon phone"></Label>
+  </ActionItem>
+  <ng-container *ngIf="platform.isAndroid">
+    <ActionItem
+      android.position="popup"
+      text="View contact">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Media">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Search">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Mute">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Wallpaper">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Block">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Clear chat">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Email chat">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Add shortcut">
+    </ActionItem>
+  </ng-container>
+</ActionBar>
+<GridLayout rows="*, auto" columns="auto" class="wallpaper">
+  <StackLayout row="0" column="0" width="100%">
+    <ns-messages-area [messages]="messages" class="messages-area"></ns-messages-area>
+  </StackLayout>
+  <StackLayout row="1" column="0" width="100%">
+    <ns-message-box class="message-box"></ns-message-box>
+  </StackLayout>
+</GridLayout>
