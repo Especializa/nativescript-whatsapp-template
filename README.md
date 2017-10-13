@@ -22,7 +22,7 @@ tns create your-project-name --template nativescript-whatsapp-template
 ## Introduction
 [![N|Solid](https://udemy-images.udemy.com/course/750x422/1011174_0030_5.jpg)](https://www.udemy.com/angular-native)
 
-This project is heavily based on [this repo](https://github.com/Especializa/nativescript-nativesapp), created as part of the course:
+This project is heavily based on [this repo](https://github.com/Especializa/nativesapp), created as part of the course:
 - [Aprenda Angular 2 + Nativescript e crie um WhatsApp](https://www.udemy.com/angular-native)
 **[CLICK HERE FOR ~90% OFF COUPON](https://www.udemy.com/angular-native/?couponCode=LANCAMENTO)**
 
@@ -30,19 +30,20 @@ At the moment, only available in Portuguese, but English version is coming soon.
 Reach out to us on Twitter [![Twitter Follow][twitter-image]][twitter-url] if you want to push us to get it done sooner :)
 
 ### First run
-Right after creating a project, it should be ready to go. Just move into your project's folder and execute the normal `tns` command to run any app:
+Right after creating a project and then npm install, it should be ready to go. Just move into your project's folder and execute the normal `tns` command to run any app:
 ```sh
 cd your-project-name
+npm i
 tns run
 ```
-Alternatively, run for the specific platform you're targeting:
+Alternatively you can target any specifc platform:
 ```sh
 tns run android
 ```
 ```sh
 tns run ios
 ```
-That's what you should expect to see for the initial screen:
+That's pretty much what you should expect to see for the initial screen:
 #### - Screenshot 1: Chats tab (iOS / Android)
 [![N|Solid](https://raw.githubusercontent.com/Especializa/nativesapp/master/app/tools/assets/screenshot-1.png)](https://www.udemy.com/angular-native)
 
@@ -75,7 +76,7 @@ export class MessagesAreaComponent implements OnInit {
   // ...
   ngOnInit() {
 -    this.messages = this.messages.slice(0, 50);
-+    // your fancier code
++    // your own code
   }
   // ...
 }
