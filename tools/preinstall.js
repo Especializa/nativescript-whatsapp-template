@@ -1,0 +1,41 @@
+const fs = require('fs');
+const path = require('path');
+const exec = require('child_process').exec;
+
+console.log('preinstall script running...');
+
+const tslintConfig = 'tslint.json';
+
+getAppRootFolder().then(appRootFolder =>
+  copyConfig(tslintConfig, appRootFolder)
+).then(appRootFolder => {
+  fs.mkdir(path.join(appRootFolder, 'app'))
+});
+
+function copyConfig(configFilename, appRootFolder) {
+  return new Promise((resolve, reject) => {
+    const sourcePath = path.join(__dirname, configFilename);
+    const destPath = path.join(appRootFolder, configFilename);
+
+    console.log(`creating ${path.resolve(destPath)}...`);
+    fs.rename(sourcePath, destPath, err => {
+      if (err) {
+        return reject(err);
+      }
+      resolve(appRootFolder);
+    });
+  });
+}
+
+function getAppRootFolder() {
+  return new Promise((resolve, reject) => {
+    // npm prefix returns the closest parent directory to contain a package.json file
+    exec('cd .. && npm prefix', (err, stdout) => {
+      if (err) {
+        return reject(err);
+      }
+
+      resolve(stdout.toString().trim());
+    });
+  });
+}
