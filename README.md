@@ -1,5 +1,4 @@
-# NativeScript Angular Template Similar to WhatsApp
-![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-32.png) ![android](https://cdn3.iconfinder.com/data/icons/logos-3/228/android-32.png)
+# NativeScript WhatsApp Template ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-32.png) ![android](https://cdn3.iconfinder.com/data/icons/logos-3/228/android-32.png)
 
 [![NPM version][npm-image]][npm-url]
 [![Downloads][downloads-image]][npm-url]
