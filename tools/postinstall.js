@@ -10,8 +10,13 @@ getPackageJson()
     // quote the parameter to use node glob syntax (using double quotes if you need it to run in Windows)
     addScriptCommand(packageJsonData, {
       commandName: 'lint',
-      command: 'tslint 'app/**/*.ts'',
+      command: 'tslint \'app/**/*.ts\'',
       message: 'Updating package.json scripts for linting...'
+    });
+    addScriptCommand(packageJsonData, {
+      commandName: 'lint:fix',
+      command: 'tslint \'app/**/*.ts\' --fix',
+      message: 'Updating package.json scripts for linting with auto fix...'
     });
   })
   .catch(err => {
