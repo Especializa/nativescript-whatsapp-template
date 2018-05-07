@@ -31,4 +31,8 @@ export class TabsComponent implements OnInit {
       );
     }
   }
+
+  onIndexChanged(event) {
+    this.selectedIndex = event.newIndex;
+  }
 }
