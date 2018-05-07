@@ -1,4 +1,4 @@
-<TabView [(ngModel)]="selectedIndex" iosIconRenderingMode="automatic">
+<TabView [selectedIndex]="selectedIndex" (selectedIndexChange)="onIndexChanged($event)" iosIconRenderingMode="automatic">
   <StackLayout *tabItem="{title: 'Status', iconSource: 'res://tabs/status'}">
     <Label text="Tab status" textWrap="true"></Label>
   </StackLayout>
